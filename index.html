@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="auto" data-size="1">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' file:; style-src 'self' file:; img-src 'self' data: blob: file:; connect-src https://api.mymemory.translated.net; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; media-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Hablemos: learn Spanish in your browser</title>
+<link rel="stylesheet" href="css/app.css">
+<script defer src="js/util.js"></script>
+<script defer src="js/rng.js"></script>
+<script defer src="data/words.js"></script>
+<script defer src="data/phrases.js"></script>
+<script defer src="data/verbs.js"></script>
+<script defer src="data/falsefriends.js"></script>
+<script defer src="data/idioms.js"></script>
+<script defer src="data/pronunciation.js"></script>
+<script defer src="data/scenarios.js"></script>
+<script defer src="data/entext.js"></script>
+<script defer src="data/why.js"></script>
+<script defer src="js/store.js"></script>
+<script defer src="js/nouns.js"></script>
+<script defer src="js/numbers.js"></script>
+<script defer src="js/conj.js"></script>
+<script defer src="js/lexicon.js"></script>
+<script defer src="js/curated.js"></script>
+<script defer src="js/reverse.js"></script>
+<script defer src="js/online.js"></script>
+<script defer src="js/srs.js"></script>
+<script defer src="js/progress.js"></script>
+<script defer src="js/quiz.js"></script>
+<script defer src="js/scenario.js"></script>
+<script defer src="js/daily.js"></script>
+<script defer src="js/api.js"></script>
+<script defer src="js/ui-core.js"></script>
+<script defer src="js/ui-translate.js"></script>
+<script defer src="js/ui-learn.js"></script>
+<script defer src="js/ui-cards.js"></script>
+<script defer src="js/ui-quiz.js"></script>
+<script defer src="js/ui-scenarios.js"></script>
+<script defer src="js/ui-progress.js"></script>
+<script defer src="js/ui.js"></script>
+</head>
+<body>
+<a class="hb-skip" href="#hb-main">Skip to content</a>
+<header class="hb-header">
+  <h1 class="hb-brand" id="hb-brand">
+    <svg width="34" height="34" viewBox="0 0 34 34" role="img" aria-label="Hablemos logo, two speech bubbles">
+      <path d="M3 5h18a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3h-9l-6 5v-5H3a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z" fill="currentColor"/>
+      <path d="M14 22h16a3 3 0 0 1 3 3v5a2 2 0 0 1-2 2h-1v3l-4-3h-12a3 3 0 0 1-3-3v-4a3 3 0 0 1 3-3z" fill="none" stroke="currentColor" stroke-width="2" transform="translate(0 -4) scale(1 .85)"/>
+    </svg>
+    Hablemos <small>let's talk: Spanish for English speakers</small>
+  </h1>
+  <nav aria-label="Sections">
+    <div class="hb-tabs" role="tablist" id="hb-tablist" aria-label="Hablemos sections">
+      <button class="hb-tab" role="tab" id="hb-tab-help" aria-controls="hb-panel-help" data-tab="help">Help</button>
+      <button class="hb-tab" role="tab" id="hb-tab-translate" aria-controls="hb-panel-translate" data-tab="translate">Translate</button>
+      <button class="hb-tab" role="tab" id="hb-tab-learn" aria-controls="hb-panel-learn" data-tab="learn">Learn</button>
+      <button class="hb-tab" role="tab" id="hb-tab-cards" aria-controls="hb-panel-cards" data-tab="cards">Flashcards</button>
+      <button class="hb-tab" role="tab" id="hb-tab-quiz" aria-controls="hb-panel-quiz" data-tab="quiz">Quizzes</button>
+      <button class="hb-tab" role="tab" id="hb-tab-scenarios" aria-controls="hb-panel-scenarios" data-tab="scenarios">Scenarios</button>
+      <button class="hb-tab" role="tab" id="hb-tab-progress" aria-controls="hb-panel-progress" data-tab="progress">Progress</button>
+    </div>
+  </nav>
+</header>
+<main id="hb-main" tabindex="-1">
+  <noscript><p class="hb-note hb-note-warn">Hablemos needs JavaScript. Nothing is sent anywhere; everything runs in your browser.</p></noscript>
+  <div id="hb-storage-notice" class="hb-note hb-note-warn" hidden>Your browser is not allowing local storage, so progress will not be saved after you close this page.</div>
+
+  <section class="hb-panel" id="hb-panel-help" role="tabpanel" aria-labelledby="hb-tab-help" tabindex="0">
+    <h2>Welcome to Hablemos</h2>
+    <div class="hb-card">
+      <p>Hablemos ("let's talk") helps English speakers learn Spanish. Translate sentences online (optional, with your consent), browse about a thousand words and three hundred phrases, practise with flashcards and quizzes, and rehearse short conversations. It runs entirely in your browser.</p>
+      <h3>Quick start</h3>
+      <ol>
+        <li><strong>Translate:</strong> type an English sentence and press "Translate online". The first time you are asked to agree to send the text to MyMemory, a third-party service. Words and phrases in the built-in library are also shown as exact matches.</li>
+        <li><strong>Learn:</strong> browse words and phrases by tier (A1, A2, B1) and topic. Mark words as learned.</li>
+        <li><strong>Flashcards:</strong> review cards with spaced repetition. Rate each card Again, Hard, Good or Easy.</li>
+        <li><strong>Quizzes and Scenarios:</strong> earn XP and badges, then try a short conversation.</li>
+      </ol>
+      <div class="hb-row"><button class="hb-btn hb-btn-primary" id="hb-help-start" type="button">Start with Translate</button></div>
+    </div>
+    <div class="hb-card">
+      <h3>What Translate can and cannot do</h3>
+      <p>Hablemos has no translator of its own for free text. Sentences are translated by MyMemory, an online third-party service, only after you agree and press "Translate online". Its quality is not guaranteed. Offline, over the daily limit, or if the request fails, you only see exact matches from the hand-written word list and phrase library, and a message. Hablemos never builds Spanish sentences itself.</p>
+      <p id="hb-help-eval">Accuracy: the word list, phrases, idioms and scenarios were written and checked by hand. Online translations come from a third party and are not covered by that check.</p>
+      <p>Spanish varies by region. Use the Spain / Latin America switch to change words such as coche and carro, or vosotros and ustedes.</p>
+    </div>
+    <div class="hb-card">
+      <h3>Privacy</h3>
+      <p>Everything runs and is stored on your device (localStorage). There is no analytics and there are no cookies. The page's Content Security Policy only allows a connection to one optional service, described next.</p>
+      <h3>Optional online translation</h3>
+      <p>Free-text translation is <strong>online only</strong> and needs your consent. The first time you press "Translate online" a notice explains that your text is sent to MyMemory, a third-party service, and that quality is not guaranteed. Nothing is sent before you press "I agree", and later only when you press the button, never while you type. You can withdraw consent in Settings (Progress tab).</p>
+      <ul>
+        <li><strong>When it helps:</strong> sentences and words that are outside the built-in library.</li>
+        <li><strong>When not to use it:</strong> private text, high-stakes text (legal, medical), heavy use, or when you are offline.</li>
+        <li><strong>Daily limits:</strong> the provider publishes 5,000 characters per day for anonymous use and 50,000 per day when an email address is supplied. A local counter shows your use; it is a convenience, not the provider's own accounting.</li>
+        <li><strong>Optional email:</strong> stored only on this device and sent only as the provider's <code>de</code> parameter in your own online requests. It is never exported.</li>
+        <li>Online results are not checked by Hablemos and are never certified. If a built-in phrase matches your text it is shown next to the online result.</li>
+      </ul>
+    </div>
+    <div class="hb-card">
+      <h3>Keyboard shortcuts</h3>
+      <ul>
+        <li>Tabs: Left and Right arrows, Home and End.</li>
+        <li>Flashcards: Space or Enter flips, 1 to 4 rate (Again, Hard, Good, Easy), S speaks, Esc leaves the deck.</li>
+        <li>Quizzes: 1 to 4 choose an option, Enter submits a typed answer.</li>
+        <li>Translate: Ctrl+Enter presses "Translate online".</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="hb-panel" id="hb-panel-translate" role="tabpanel" aria-labelledby="hb-tab-translate" tabindex="0" hidden></section>
+  <section class="hb-panel" id="hb-panel-learn" role="tabpanel" aria-labelledby="hb-tab-learn" tabindex="0" hidden></section>
+  <section class="hb-panel" id="hb-panel-cards" role="tabpanel" aria-labelledby="hb-tab-cards" tabindex="0" hidden></section>
+  <section class="hb-panel" id="hb-panel-quiz" role="tabpanel" aria-labelledby="hb-tab-quiz" tabindex="0" hidden></section>
+  <section class="hb-panel" id="hb-panel-scenarios" role="tabpanel" aria-labelledby="hb-tab-scenarios" tabindex="0" hidden></section>
+  <section class="hb-panel" id="hb-panel-progress" role="tabpanel" aria-labelledby="hb-tab-progress" tabindex="0" hidden></section>
+</main>
+<div id="hb-live" class="hb-live" role="status" aria-live="polite"></div>
+<div id="hb-overlay" class="hb-overlay" hidden></div>
+</body>
+</html>
+

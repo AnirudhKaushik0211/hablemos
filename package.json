@@ -1,0 +1,16 @@
+{
+  "name": "hablemos",
+  "version": "1.0.0",
+  "description": "Hablemos: a browser-only Spanish learning tool for English speakers.",
+  "private": true,
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.cjs\"",
+    "eval": "node scripts/eval.cjs",
+    "smoke": "node scripts/ui-smoke.cjs",
+    "screenshots": "node scripts/capture-screenshots.cjs",
+    "package": "node scripts/package-public.cjs"
+  }
+}
