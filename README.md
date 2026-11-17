@@ -2,7 +2,7 @@
 
 Hablemos ("let's talk") is a free, browser-only Spanish learning tool for English speakers. Translate sentences online (with your consent), browse about a thousand words and three hundred phrases, review flashcards with spaced repetition, take quizzes, and rehearse short conversations. There is no server, no account and no tracking. Open `index.html` or host the folder on GitHub Pages.
 
-Live demo: add the GitHub Pages link here after publishing.
+Live demo: https://anirudhkaushik0211.github.io/hablemos/
 
 ![Translate tab](docs/screenshot-translate.png)
 
